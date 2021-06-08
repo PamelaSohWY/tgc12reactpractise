@@ -23,7 +23,7 @@ export default class ShippingForm extends React.Component{
             modifiedValues =[...currentValues, event.target.value] //spread current values add event.target.value
         } else 
         modifiedValues = currentValues.filter(
-            (element)=>{ //element is arbitrary variable 
+            (element)=>{ //element is arbitrary variable //on its own this function iterated through each item , so when console log it will only display each item
             return element !== event.target.value;
             //go throught every element or x variable in current value, compare with event.target.value. 
             //if the same as event.target.value then dont return 
@@ -62,9 +62,13 @@ export default class ShippingForm extends React.Component{
         <div>
         <label>Options</label>
         <div>
-        <input type="checkbox" name="options" value="wrap" onChange= {this.checkBox} checked={this.state.options.includes('wrap')}/>Wrap the Shipment 
-        <input type="checkbox" name="options" value="remove" onChange= {this.checkBox} checked={this.state.options.includes('remove')}/>Remove Pricing Label 
-        <input type="checkbox" name="options" value="add" onChange= {this.checkBox} checked={this.state.options.includes('add')}/>Add Greeting Card
+        <input type="checkbox" name="options" value="Wrap the Shipment" onChange= {this.checkBox} checked={this.state.options.includes('wrap')}/>Wrap the Shipment 
+        </div>
+        <div>
+        <input type="checkbox" name="options" value="Remove Pricing Label" onChange= {this.checkBox} checked={this.state.options.includes('remove')}/>Remove Pricing Label 
+        </div>
+        <div>
+        <input type="checkbox" name="options" value="Add Greeting Card" onChange= {this.checkBox} checked={this.state.options.includes('add')}/>Add Greeting Card
         </div>
         </div>
         
@@ -72,9 +76,9 @@ export default class ShippingForm extends React.Component{
 
         <div> 
         <h3>Your Response is Registered</h3>
-        {this.state.email}
-        {this.state.shipping}
-        {this.state.options}
+        <div>{this.state.email}</div> 
+        <div>{this.state.shipping}</div>
+        <div>{this.state.options}</div>
         </div>
 
        </React.Fragment> 
