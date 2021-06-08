@@ -53,18 +53,20 @@ export default class Counter extends React.Component{
                 width:"20px",
                 color: this.changeColour(this.state.count) //call function, put in state count as arguement
            
-           //
+           //line 54 is calling a function there require a variable
            
            
            }}  >            <h1>
             {this.state.count}</h1>
 
-            <button onClick={this.increment}>+1</button>
+            <button onClick={this.increment}>+1</button> 
             <button onClick={this.decrement}>-1</button>
 
             </div>
         </React.Fragment>
         )
+//line 62 is assigning function 
+
     } //end of render
 }// end of class counter 
 
