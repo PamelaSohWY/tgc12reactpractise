@@ -10,7 +10,7 @@ export default class ShippingForm extends React.Component{
     //General update form field function 
     updateFormField = (event) => {
         this.setState({
-            [event.target.name]:event.target.value //why is this in square bracket?
+            [event.target.name]:event.target.value //why is this in square bracket? // take it literally
         })
     }
 
@@ -62,7 +62,7 @@ export default class ShippingForm extends React.Component{
         <div>
         <label>Options</label>
         <div>
-        <input type="checkbox" name="options" value="Wrap the Shipment" onChange= {this.checkBox} checked={this.state.options.includes('wrap')}/>Wrap the Shipment 
+        <input type="checkbox" name="options" value="Wrap the Shipment" onChange= {this.checkBox} checked={this.state.options.includes('Wrap the Shipment')}/>Wrap the Shipment 
         </div>
         <div>
         <input type="checkbox" name="options" value="Remove Pricing Label" onChange= {this.checkBox} checked={this.state.options.includes('remove')}/>Remove Pricing Label 
